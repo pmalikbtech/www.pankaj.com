@@ -74,7 +74,7 @@
 					from: 0,
 					to: counter,
 					speed: 3000,// Stats Counter Speed
-					refreshInterval: 50,
+					refreshInterval: 50
 				});
 			});
 		 }, { offset: '70%', triggerOnce: true });
