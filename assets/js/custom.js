@@ -143,7 +143,7 @@
 		 * Contact form ajax
 		/* ---------------------------------------------- */
 
-		$("#contact-form").submit(function(e) {
+		$("").submit(function(e) {
 
 			e.preventDefault();
 

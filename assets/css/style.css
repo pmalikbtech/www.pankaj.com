@@ -654,7 +654,9 @@ h3 > .fa {
 /* ---------------------------------------------- /*
  * Contact
 /* ---------------------------------------------- */
-
+#error-form{
+    margin-top:5px !important;
+}
 #contact {
 	background: #414C40;
 	color: #FFF;

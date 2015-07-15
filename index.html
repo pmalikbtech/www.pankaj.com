@@ -701,7 +701,7 @@
 
             <div class="col-md-6 wow bounceInRight">
 
-                <form id="contact-form" role="form">
+                <form id="contact-form" role="form"  action="/post" method="POST">
 
                     <div class="form-group">
                         <label class="sr-only" for="c_name">Name</label>
@@ -718,9 +718,12 @@
                                   placeholder="Your message"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-custom-1">
+                    <button type="button" class="btn btn-custom-1" onclick="validateForm()">
                         <i class="fa fa-bullhorn icon-before"></i> Send it
                     </button>
+                    <div id="error-form">
+
+                    </div>
 
                 </form>
 
@@ -788,6 +791,23 @@
 <script src="assets/js/smoothscroll.js"></script>
 <!-- Custom scripts -->
 <script src="assets/js/custom.js"></script>
+<script>
+
+    function validateForm() {
+        var x = document.forms["contact-form"]["c_name"].value;
+        var y = document.forms["contact-form"]["c_email"].value;
+        var z = document.forms["contact-form"]["c_message"].value;
+        if ((x == null || x == "")||(y == null || y == "")||(z == null || z == "")) {
+           document.getElementById('error-form').innerHTML='<i class="fa fa-warning">&nbsp;Please check all fields';
+            return false;
+        }
+       else{
+            document.getElementById('error-form').innerHTML='';
+            document.forms["contact-form"].submit();
+        }
+
+    }
+</script>
 
 </body>
 </html>
