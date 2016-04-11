@@ -11,7 +11,7 @@ var sendMail =function(req,res,next){
         service: "Gmail",
         auth: {
             user: "pmalikbtech@gmail.com",
-            pass: "123.9808625849"
+            pass: "xxxxxxxxxxxxxxxxxx"
         }
     });
 
